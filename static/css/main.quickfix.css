@@ -6,4 +6,24 @@
  * Contains immediate fixes that should be revised later and added in the
  * main.css.
  */
-
+.button-con{
+  flex: 1
+}
+.delete-btn{
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+a.edit-btn{
+  color: green;
+  font-size: 16px;
+  cursor: pointer;
+}
+.li-item{
+	flex-direction: row;
+	display: flex;
+	width: 40%;
+}
+.li-item > a{
+	flex: 3;
+}

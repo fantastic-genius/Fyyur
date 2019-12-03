@@ -5,13 +5,17 @@
 <h3>{{ area.city }}, {{ area.state }}</h3>
 	<ul class="items">
 		{% for venue in area.venues %}
-		<li>
+		<li class="li-item">
 			<a href="/venues/{{ venue.id }}">
 				<i class="fas fa-music"></i>
 				<div class="item">
-					<h5>{{ venue.name }}</h5>
+					<h5>{{ venue.name }}</h5> 
 				</div>
 			</a>
+			<div class="button-con">
+				<a class="edit-btn" href="/venues/{{ venue.id }}/edit"><i class="fas fa-edit"></i></a>
+				<i class="fas fa-trash delete-btn venue-delete" data-id="{{ venue.id }}"></i>
+			</div>
 		</li>
 		{% endfor %}
 	</ul>

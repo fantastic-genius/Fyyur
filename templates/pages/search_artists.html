@@ -4,13 +4,16 @@
 <h3>Number of search results for "{{ search_term }}": {{ results.count }}</h3>
 <ul class="items">
 	{% for artist in results.data %}
-	<li>
+	<li class="li-item">
 		<a href="/artists/{{ artist.id }}">
 			<i class="fas fa-users"></i>
 			<div class="item">
 				<h5>{{ artist.name }}</h5>
 			</div>
 		</a>
+		<div class="button-con">
+			<a class="edit-btn" href="/artists/{{ artist.id }}/edit"><i class="fas fa-edit"></i></a>
+		</div>
 	</li>
 	{% endfor %}
 </ul>
